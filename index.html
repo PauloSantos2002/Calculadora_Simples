@@ -3,74 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aula 01 - Estacio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
 </head>
 <body>
-    
-        <h2>Digite valores para:</h2>
-        <input type="number" id="num1">
-        <input type="number" id="num2">
-        <br>
-        <input type="button" value="Somar" onclick="somar()">
-        <input type="button" value="Subtrair" onclick="subtrair()">
-        <input type="button" value="Dividir" onclick="dividir()">
-        <input type="button" value="Multiplicar" onclick="multiplicar()">
-        <p id="result"></p>
+    <main class="calculadora">
         
+            <p class="tela">0</p>
+            <section class="numbers">
+                <input type="button" value="7" class="btn-num" id="7">
+                <input type="button" value="8" class="btn-num" id="8">
+                <input type="button" value="9" class="btn-num" id="9">
+                <input type="button" value="+" class="btn-operacao">
+            </section>
+            <section class="numbers">
+                <input type="button" value="4" class="btn-num" id="4">
+                <input type="button" value="5" class="btn-num" id="5">
+                <input type="button" value="6" class="btn-num" id="6">
+                <input type="button" value="-" class="btn-operacao">
+            </section>
+            <section class="numbers">
+                <input type="button" value="1" class="btn-num" id="1">
+                <input type="button" value="2" class="btn-num" id="2">
+                <input type="button" value="3" class="btn-num" id="3">
+                <input type="button" value="/" class="btn-operacao">
+            </section>
+            <section class="numbers">
+                <input type="button" value="0" class="btn-num" id="0">
+                <input type="button" value="=" class="btn-operacao igual">
+
+                <input type="button" value="c" class="btn-operacao apagar">
+                <input type="button" value="X" class="btn-operacao">
+            </section>
         
+    </main>
 </body>
-<script>
-    //Função para somar 2 valores
-    function somar() {
-        //pegando valores
-        let n1 = parseFloat(document.getElementById("num1").value);
-        let n2 = parseFloat(document.getElementById("num2").value);
 
-        let soma = n1 + n2;
-        document.getElementById("result").innerHTML = soma;
-    }
-
-    //função para subtrair 2 valores
-    function subtrair() {
-        //pegando valores
-        let n1 = parseFloat(document.getElementById("num1").value);
-        let n2 = parseFloat(document.getElementById("num2").value);
-        
-        //verificação se os valores são validos
-        if(isNaN(n1) || isNaN(n2)){
-            alert("Por favor, insira um valor válido.");
-            return;
-        }
-        let soma = n1 - n2;
-        document.getElementById("result").innerHTML = soma;
-    }
-
-    function dividir() {
-        //pegando valores
-        let n1 = parseFloat(document.getElementById("num1").value);
-        let n2 = parseFloat(document.getElementById("num2").value);
-        
-        //verificação se os valores são validos
-        if(isNaN(n1) || isNaN(n2)){
-            alert("Por favor, insira um valor válido.");
-            return;
-        }
-        let soma = n1 / n2;
-        document.getElementById("result").innerHTML = soma;
-    }
-    function multiplicar() {
-        //pegando valores
-        let n1 = parseFloat(document.getElementById("num1").value);
-        let n2 = parseFloat(document.getElementById("num2").value);
-        
-        //verificação se os valores são validos
-        if(isNaN(n1) || isNaN(n2)){
-            alert("Por favor, insira um valor válido.");
-            return;
-        }
-        let soma = n1 * n2;
-        document.getElementById("result").innerHTML = soma;
-    }
-</script>
 </html>
